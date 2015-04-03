@@ -48,22 +48,26 @@ is entered for the first time. -->
 	scale is a good compromise for performance/accuracy. However in sufficiently
 	large rooms this is still too much, and 25% scale in necessary. This leads to
 	a substantial sarcifice in hit-detection quality, so avoid big rooms!-->
-  <asset name='firstRoomMap' type='graphic'>backgrounds/firstRoomMap.png</asset>
+  <asset name='actualfirstRoomMap' type='graphic'>backgrounds/actualfirstRoomMap.png</asset>
   
   <!-- an item to be found in a chest, nothing special about it-->
-  <asset name='item1' type='graphic'>objects/items/item1.png</asset>
-</assets>
+  <asset name='diary' type='graphic'>objects/items/diary.png</asset>
 
+  <asset name='table' type='graphic'>objects/items/desk.png</asset>
+</assets>
 <!-- We create the sprite for this item outside of everything else
 because by default it isn't anywhere at all. We just want to be able to
 access it at some point in the future. This is a very common pattern. We
 do this for anything that will "eventually" be added to a room.
 
 Note: depthing='2' puts this in front of everything, including foreground elements! -->
-<sprite name='item1' depthing='3'>
-	<animation sheet='item1' x='-30' y='-30'/>
+<sprite name='diary' depthing='3'>
+	<animation sheet='diary' x='-30' y='-30'/>
 </sprite>
-
+<sprite name='desk' depthing='1'>
+        <animation sheet='desk' x='386' y='136'/>
+</sprite>
+  
 <!-- We wrap all room tags in the rooms tag. This is mostly useless since it's
 not good practice to keep multiple rooms in one file, but hey, better
 safe than sorry.-->
@@ -75,7 +79,7 @@ safe than sorry.-->
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
 	it's incredibly useful and easy to use. -->
-  <room name='firstRoom' walkableMap='firstRoomMap' scale='4'>
+  <room name='firstRoom' walkableMap='actaulfirstRoomMap' scale='4'>
   
   	<!-- here we drop in our character. Since we specified everything in 
   	chars/meenah.xml, we don't have to do much here. We just need to specify
