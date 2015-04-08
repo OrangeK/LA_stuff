@@ -5,9 +5,7 @@ is entered for the first time. -->
 <sburb description="first room">
 
 <dependencies>
-	<dependency>chars/meenah.xml</dependency> <!-- loading in everything meenah entails -->
-	<dependency>chars/karkat.xml</dependency> <!-- and karkat -->
-</dependencies>
+	<dependency>chars/aegeas.xml</dependency> <!-- loading in everything aegeas entails -->
 
 <assets>
 	<!-- This is the first half of a big optimization. Some people have a lot of
@@ -32,27 +30,17 @@ is entered for the first time. -->
 	<asset name='firstRoomBG_3_1' type='graphic'>backgrounds/slices/firstRoomBG_3_1.png</asset>
 	<asset name='firstRoomBG_3_2' type='graphic'>backgrounds/slices/firstRoomBG_3_2.png</asset>
 	
-	<!-- note that there are missing images in the FG where transparent regions
-	have been discarded. This is handled correctly! -->
-	<asset name='firstRoomFG_1_0' type='graphic'>backgrounds/slices/firstRoomFG_1_0.png</asset>
-	<asset name='firstRoomFG_1_2' type='graphic'>backgrounds/slices/firstRoomFG_1_2.png</asset>
-	<asset name='firstRoomFG_2_0' type='graphic'>backgrounds/slices/firstRoomFG_2_0.png</asset>
-	<asset name='firstRoomFG_2_2' type='graphic'>backgrounds/slices/firstRoomFG_2_2.png</asset>
-	<asset name='firstRoomFG_3_0' type='graphic'>backgrounds/slices/firstRoomFG_3_0.png</asset>
-	<asset name='firstRoomFG_3_1' type='graphic'>backgrounds/slices/firstRoomFG_3_1.png</asset>
-	<asset name='firstRoomFG_3_2' type='graphic'>backgrounds/slices/firstRoomFG_3_2.png</asset>
-	
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
 	a very large amount of memory to use, so we keep the scaled down. I find 50%
 	scale is a good compromise for performance/accuracy. However in sufficiently
 	large rooms this is still too much, and 25% scale in necessary. This leads to
 	a substantial sarcifice in hit-detection quality, so avoid big rooms!-->
-  <asset name='actualfirstRoomMap' type='graphic'>backgrounds/actualfirstRoomMap.png</asset>
+  <asset name='firstRoomMap' type='graphic'>backgrounds/firstRoomMap.png</asset>
   
   <!-- an item to be found in a chest, nothing special about it-->
   <asset name='diary' type='graphic'>objects/items/diary.png</asset>
-
+  <asset name='bubble' type='graphic'>objects/items/bubble.png</asset>
   <asset name='table' type='graphic'>objects/items/desk.png</asset>
 </assets>
 <!-- We create the sprite for this item outside of everything else
@@ -61,13 +49,15 @@ access it at some point in the future. This is a very common pattern. We
 do this for anything that will "eventually" be added to a room.
 
 Note: depthing='2' puts this in front of everything, including foreground elements! -->
-<sprite name='diary' depthing='3'>
+<sprite name='diary' depthing='2'>
 	<animation sheet='diary' x='-30' y='-30'/>
 </sprite>
 <sprite name='desk' depthing='1'>
         <animation sheet='desk' x='386' y='136'/>
 </sprite>
-  
+<sprite name='bubble' depthing='2'>
+        <animation sheet='bubble' x='-420' y='-69'/>
+</sprite>
 <!-- We wrap all room tags in the rooms tag. This is mostly useless since it's
 not good practice to keep multiple rooms in one file, but hey, better
 safe than sorry.-->
@@ -79,58 +69,23 @@ safe than sorry.-->
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
 	it's incredibly useful and easy to use. -->
-  <room name='firstRoom' walkableMap='actaulfirstRoomMap' scale='4'>
-  
+  <room name='firstRoom' walkableMap='firstRoomMap' width='1236' height='844'>
+        <trigger>
+  	  <args>inBox,char,380,788,483,748</args>
+            <action command="changeRoomRemote">
+              <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
+            </action
+        </trigger
   	<!-- here we drop in our character. Since we specified everything in 
-  	chars/meenah.xml, we don't have to do much here. We just need to specify
-  	her location. Note that class='meenah' will fill in all the values we
-  	didn't specify using the class in chars/meenah.xml, including any
+  	chars/aegeas.xml, we don't have to do much here. We just need to specify
+  	his location. Note that class='aegeas' will fill in all the values we
+  	didn't specify using the class in chars/aegeas.xml, including any
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
-  	<character class='meenah' x='500' y='500'>
-  		<action class='beMeenah'/>
+  	<character class='aegeas' x='249' y='413'>
   	</character>
   
-  	<character class='karkat' x='420' y='500'>
-  		<action class='beKarkat'/>
-  		<action command='talk' name='Talk.'>
-  			<args>
-  				@meenah_talk Hey what're you doing in my sample. 
-  				@meenah_angrytalk This is my sample I swear to god I will fight you. Get out. Get ouuuuuut.
-  				@karkat_talk what
-  				@meenah_annoyed ouuuuuuut
-  			</args>
-  		</action>
-  	</character>
-  	
-  	<character class='karkat' name='karkat2' x='620' y='450'>
-  		<action command='follow' sprite='meenah' name='Follow.'>
-  			<args>karkat2,meenah</args>
-  			<action command='removeAction' noDelay='true'>
-  				<args>karkat2,Follow.</args>
-  			</action>
-  		</action>
-  	</character>
-  	
-  	<character class='karkat' name='karkat3' x='620' y='650'>
-  		<action command='follow' sprite='meenah' name='Follow.'>
-  			<args>karkat3,meenah</args>
-  			<action command='removeAction' noDelay='true'>
-  				<args>karkat3,Follow.</args>
-  			</action>
-  		</action>
-  	</character>
-  	<!-- here we're adding a standard chest based on a template class found in
-  	etc/standardTemplates.xml -->
-  	<sprite class='chest1' name='chest1' x='166' y='498'>
-			<action command='openChest' name='Open.'>
-				<args>
-					chest1,item1, @! You got a CAN OF TAB!
-				</args>
-			</action>
-		</sprite>
-   
    <!-- here we're adding in our BG and FG. This is the second half of our 
    optimization. To avoid creating a dozen sprites for every single tile, we
    specify that this image has been sliced up into tiles. Then we just specify
@@ -146,7 +101,7 @@ safe than sorry.-->
 
 		<!-- note depthing='2' is what puts this in the foreground -->
 		<sprite name='firstRoomFG' depthing='2'>
-    	<animation sheet='firstRoomFG' sliced='true' numCols='4' numRows='3' colSize='500' rowSize='500'/>
+    	<animation sheet='firstRoomFG' sliced='true' numCols='3' numRows='2' colSize='500' rowSize='500'/>
     </sprite>
   </room>
 </rooms>
