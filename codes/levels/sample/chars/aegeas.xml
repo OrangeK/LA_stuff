@@ -6,7 +6,7 @@ and even their music. Often this is used to also link in their actual conversati
 <classes>
 	<!-- default values for all this character's dailog sprites -->
 	<animation class='aegeas-dialog' frameInterval='6' x='-180' y='-524'/>
-	
+</classes>
 	<!-- The description of this character (see usage in rooms/firstRoom.xml). 
 	Characters use a single sprite sheet to describe eight different animations, 
 	and therefore need a lot of parameters to properly describe themselves.
@@ -14,8 +14,8 @@ and even their music. Often this is used to also link in their actual conversati
 	<character class='aegeas' name='aegeas' sx='-50' sy='-115' sWidth='40' sHeight='88' width='35' height='25' sheet='aegeasSheet' state='walkFront' facing='Front'>
 		
 	</character>
-	
-	<!— sprite sheet containing all her animations -->
+	<assets>
+	<!-- sprite sheet containing all her animations -->
 	<asset name='aegeasSheet' type='graphic'>chars/aegeas/aegeas.png</asset>
 	
 	<!-- his dialog sprites -->
@@ -25,7 +25,7 @@ and even their music. Often this is used to also link in their actual conversati
 <hud>
 	<!-- this is the actual place where the dialog sprites get registered -->
 	<dialogsprites>	
-  		<animation name='aegeas_blank' class='aegeas-dialog' sheet='aegeas_annoyed'/>
+  		<animation name='aegeas_blank' class='aegeas-dialog' sheet='aegeas_blank'/>
         </dialogsprites>
 </hud>
 </sburb>
