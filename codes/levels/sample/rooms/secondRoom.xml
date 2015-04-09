@@ -17,19 +17,50 @@ is entered for the first time. -->
 	find that"s a good compromise for performance/complexity. 
 	
 	utils/image_slice/ has a utility for doing this automatically. -->
-  <asset name="secondRoomBG_0_0" type="graphic">backgrounds/slices/secondRoomBG_0_0.png</asset>
+        <asset name="secondRoomBG_0_0" type="graphic">backgrounds/slices/secondRoomBG_0_0.png</asset>
 	<asset name="secondRoomBG_0_1" type="graphic">backgrounds/slices/secondRoomBG_0_1.png</asset>
 	<asset name="secondRoomBG_0_2" type="graphic">backgrounds/slices/secondRoomBG_0_2.png</asset>
+	<asset name="secondRoomBG_0_3" type="graphic">backgrounds/slices/secondRoomBG_0_3.png</asset>
+	<asset name="secondRoomBG_0_4" type="graphic">backgrounds/slices/secondRoomBG_0_4.png</asset>
+	<asset name="secondRoomBG_0_5" type="graphic">backgrounds/slices/secondRoomBG_0_5.png</asset>
 	<asset name="secondRoomBG_1_0" type="graphic">backgrounds/slices/secondRoomBG_1_0.png</asset>
 	<asset name="secondRoomBG_1_1" type="graphic">backgrounds/slices/secondRoomBG_1_1.png</asset>
 	<asset name="secondRoomBG_1_2" type="graphic">backgrounds/slices/secondRoomBG_1_2.png</asset>
+	<asset name="secondRoomBG_1_3" type="graphic">backgrounds/slices/secondRoomBG_1_3.png</asset>
+	<asset name="secondRoomBG_1_4" type="graphic">backgrounds/slices/secondRoomBG_1_4.png</asset>
+	<asset name="secondRoomBG_1_5" type="graphic">backgrounds/slices/secondRoomBG_1_5.png</asset>
 	<asset name="secondRoomBG_2_0" type="graphic">backgrounds/slices/secondRoomBG_2_0.png</asset>
 	<asset name="secondRoomBG_2_1" type="graphic">backgrounds/slices/secondRoomBG_2_1.png</asset>
 	<asset name="secondRoomBG_2_2" type="graphic">backgrounds/slices/secondRoomBG_2_2.png</asset>
+	<asset name="secondRoomBG_2_3" type="graphic">backgrounds/slices/secondRoomBG_2_3.png</asset>
+	<asset name="secondRoomBG_2_4" type="graphic">backgrounds/slices/secondRoomBG_2_4.png</asset>
+	<asset name="secondRoomBG_2_5" type="graphic">backgrounds/slices/secondRoomBG_2_5.png</asset>
 	<asset name="secondRoomBG_3_0" type="graphic">backgrounds/slices/secondRoomBG_3_0.png</asset>
 	<asset name="secondRoomBG_3_1" type="graphic">backgrounds/slices/secondRoomBG_3_1.png</asset>
 	<asset name="secondRoomBG_3_2" type="graphic">backgrounds/slices/secondRoomBG_3_2.png</asset>
+	<asset name="secondRoomBG_3_3" type="graphic">backgrounds/slices/secondRoomBG_3_3.png</asset>
+	<asset name="secondRoomBG_3_4" type="graphic">backgrounds/slices/secondRoomBG_3_4.png</asset>
+	<asset name="secondRoomBG_3_5" type="graphic">backgrounds/slices/secondRoomBG_3_5.png</asset>
+	<asset name="secondRoomBG_4_0" type="graphic">backgrounds/slices/secondRoomBG_4_0.png</asset>
+	<asset name="secondRoomBG_4_1" type="graphic">backgrounds/slices/secondRoomBG_4_1.png</asset>
+	<asset name="secondRoomBG_4_2" type="graphic">backgrounds/slices/secondRoomBG_4_2.png</asset>
+	<asset name="secondRoomBG_4_3" type="graphic">backgrounds/slices/secondRoomBG_4_3.png</asset>
+	<asset name="secondRoomBG_4_4" type="graphic">backgrounds/slices/secondRoomBG_4_4.png</asset>
+	<asset name="secondRoomBG_4_5" type="graphic">backgrounds/slices/secondRoomBG_4_5.png</asset>
+	<asset name="secondRoomBG_5_0" type="graphic">backgrounds/slices/secondRoomBG_5_0.png</asset>
+	<asset name="secondRoomBG_5_1" type="graphic">backgrounds/slices/secondRoomBG_5_1.png</asset>
+	<asset name="secondRoomBG_5_2" type="graphic">backgrounds/slices/secondRoomBG_5_2.png</asset>
+	<asset name="secondRoomBG_5_3" type="graphic">backgrounds/slices/secondRoomBG_5_3.png</asset>
+	<asset name="secondRoomBG_5_4" type="graphic">backgrounds/slices/secondRoomBG_5_4.png</asset>
+	<asset name="secondRoomBG_5_5" type="graphic">backgrounds/slices/secondRoomBG_5_5.png</asset>
+	<asset name="secondRoomBG_6_0" type="graphic">backgrounds/slices/secondRoomBG_6_0.png</asset>
+	<asset name="secondRoomBG_6_1" type="graphic">backgrounds/slices/secondRoomBG_6_1.png</asset>
+	<asset name="secondRoomBG_6_2" type="graphic">backgrounds/slices/secondRoomBG_6_2.png</asset>
+	<asset name="secondRoomBG_6_3" type="graphic">backgrounds/slices/secondRoomBG_6_3.png</asset>
+	<asset name="secondRoomBG_6_4" type="graphic">backgrounds/slices/secondRoomBG_6_4.png</asset>
+	<asset name="secondRoomBG_6_5" type="graphic">backgrounds/slices/secondRoomBG_6_5.png</asset>
 	<asset name="secondRoomBridge1" type="path">1669,1787;592,13;481,13;304,133;287,224</asset>
+
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
 	a very large amount of memory to use, so we keep the scaled down. I find 50%
