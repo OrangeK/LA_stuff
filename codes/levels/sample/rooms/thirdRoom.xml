@@ -71,7 +71,8 @@ safe than sorry.-->
 	it"s incredibly useful and easy to use. -->
   <room name="thirdRoom" walkableMap="thirdRoomMap" width="1236" height="844">
       <paths>
-        <MotionPath path="thirdRoomStairs" xtox = '0.7' xtoy = '0.7' ytox='0' ytoy = '1' dx='0' dy='0'/> 
+        <MotionPath path="thirdRoomStairs" xtox = '0.7' xtoy = '0.7' ytox='0' ytoy = '1' dx='0' dy='0'/>
+      </paths> 
         <trigger>
   	  <args>inBox,char,380,788,483,748</args>
             <action command="changeRoomRemote">

@@ -6,7 +6,8 @@ is entered for the first time. -->
 
 <dependencies>
 	<dependency>chars/aegeas.xml</dependency> <!-- loading in everything aegeas entails -->
-
+        <dependency>chars/orange.xml</dependency>
+</dependencies>
 <assets>
 	<!-- This is the first half of a big optimization. Some people have a lot of
 	trouble rendering big images, even if only a small part is being requested. While
@@ -17,7 +18,7 @@ is entered for the first time. -->
 	find that's a good compromise for performance/complexity. 
 	
 	utils/image_slice/ has a utility for doing this automatically. -->
-  <asset name='firstRoomBG_0_0' type='graphic'>backgrounds/slices/firstRoomBG_0_0.png</asset>
+        <asset name='firstRoomBG_0_0' type='graphic'>backgrounds/slices/firstRoomBG_0_0.png</asset>
 	<asset name='firstRoomBG_0_1' type='graphic'>backgrounds/slices/firstRoomBG_0_1.png</asset>
 	<asset name='firstRoomBG_0_2' type='graphic'>backgrounds/slices/firstRoomBG_0_2.png</asset>
 	<asset name='firstRoomBG_1_0' type='graphic'>backgrounds/slices/firstRoomBG_1_0.png</asset>
@@ -70,12 +71,14 @@ safe than sorry.-->
 	specified here if need be. The walkableMap is theoretically optional, but
 	it's incredibly useful and easy to use. -->
   <room name='firstRoom' walkableMap='firstRoomMap' width='1236' height='844'>
+     <triggers>  
         <trigger>
   	  <args>inBox,char,380,788,483,748</args>
             <action command="changeRoomRemote">
               <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
-            </action
-        </trigger
+            </action>
+        </trigger>
+    </triggers>
   	<!-- here we drop in our character. Since we specified everything in 
   	chars/aegeas.xml, we don't have to do much here. We just need to specify
   	his location. Note that class='aegeas' will fill in all the values we
@@ -96,13 +99,9 @@ safe than sorry.-->
    <!-- Note no depthing specification puts a sprite in the background. Not 
    specifying coordinates also puts them at (0,0) by default (top-left corner). -->
     <sprite name='firstRoomBG'>
-    	<animation sheet='firstRoomBG' sliced='true' numCols='4' numRows='3' colSize='500' rowSize='500'/>
+    	<animation sheet='firstRoomBG' sliced='true' numCols='3' numRows='2' colSize='500' rowSize='500'/>
     </sprite>
 
-		<!-- note depthing='2' is what puts this in the foreground -->
-		<sprite name='firstRoomFG' depthing='2'>
-    	<animation sheet='firstRoomFG' sliced='true' numCols='3' numRows='2' colSize='500' rowSize='500'/>
-    </sprite>
   </room>
 </rooms>
 </sburb>

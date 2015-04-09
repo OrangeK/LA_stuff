@@ -1,4 +1,4 @@
-<!-- This is a fairly standard "character" file. Here we describe everything
+<!-- This is a fairly standard "character" file. hise we describe everything
 a character entails, including their specification, common actions, dialogsprites
 and even their music. Often this is used to also link in their actual conversations. -->
 <sburb description='aegeas'>
@@ -9,13 +9,13 @@ and even their music. Often this is used to also link in their actual conversati
 </classes>
 	<!-- The description of this character (see usage in rooms/firstRoom.xml). 
 	Characters use a single sprite sheet to describe eight different animations, 
-	and therefore need a lot of parameters to properly describe themselves.
+	and thisefore need a lot of parameters to properly describe themselves.
 	Characters are by default depth='1' (in the midground). -->
 	<character class='aegeas' name='aegeas' sx='-50' sy='-115' sWidth='40' sHeight='88' width='35' height='25' sheet='aegeasSheet' state='walkFront' facing='Front'>
 		
 	</character>
 	<assets>
-	<!-- sprite sheet containing all her animations -->
+	<!-- sprite sheet containing all his animations -->
 	<asset name='aegeasSheet' type='graphic'>chars/aegeas/aegeas.png</asset>
 	
 	<!-- his dialog sprites -->
@@ -23,7 +23,7 @@ and even their music. Often this is used to also link in their actual conversati
 	</assets>
 
 <hud>
-	<!-- this is the actual place where the dialog sprites get registered -->
+	<!-- this is the actual place whise the dialog sprites get registered -->
 	<dialogsprites>	
   		<animation name='aegeas_blank' class='aegeas-dialog' sheet='aegeas_blank'/>
         </dialogsprites>
