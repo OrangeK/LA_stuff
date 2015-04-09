@@ -59,8 +59,9 @@ is entered for the first time. -->
 	<asset name="secondRoomBG_6_3" type="graphic">backgrounds/slices/secondRoomBG_6_3.png</asset>
 	<asset name="secondRoomBG_6_4" type="graphic">backgrounds/slices/secondRoomBG_6_4.png</asset>
 	<asset name="secondRoomBG_6_5" type="graphic">backgrounds/slices/secondRoomBG_6_5.png</asset>
-	<asset name="secondRoomBridge1" type="path">1669,1787;592,13;481,13;304,133;287,224</asset>
-
+	<asset name="secondRoomBridge1" type="path">1669,1787;1806,1708;1814,1826;1716,1880;1669,1787</asset>
+	
+	<asset name="secondRoomBridge2" type="path">1792,17893;1806,1708;1814,1826;1943,1895;1792,1793</asset>
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
 	a very large amount of memory to use, so we keep the scaled down. I find 50%
