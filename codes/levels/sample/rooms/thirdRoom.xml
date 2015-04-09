@@ -17,18 +17,10 @@ is entered for the first time. -->
 	find that"s a good compromise for performance/complexity. 
 	
 	utils/image_slice/ has a utility for doing this automatically. -->
-  <asset name="thirdRoomBG_0_0" type="graphic">backgrounds/slices/thirdRoomBG_0_0.png</asset>
+	<asset name="thirdRoomBG_0_0" type="graphic">backgrounds/slices/thirdRoomBG_0_0.png</asset>
 	<asset name="thirdRoomBG_0_1" type="graphic">backgrounds/slices/thirdRoomBG_0_1.png</asset>
-	<asset name="thirdRoomBG_0_2" type="graphic">backgrounds/slices/thirdRoomBG_0_2.png</asset>
 	<asset name="thirdRoomBG_1_0" type="graphic">backgrounds/slices/thirdRoomBG_1_0.png</asset>
 	<asset name="thirdRoomBG_1_1" type="graphic">backgrounds/slices/thirdRoomBG_1_1.png</asset>
-	<asset name="thirdRoomBG_1_2" type="graphic">backgrounds/slices/thirdRoomBG_1_2.png</asset>
-	<asset name="thirdRoomBG_2_0" type="graphic">backgrounds/slices/thirdRoomBG_2_0.png</asset>
-	<asset name="thirdRoomBG_2_1" type="graphic">backgrounds/slices/thirdRoomBG_2_1.png</asset>
-	<asset name="thirdRoomBG_2_2" type="graphic">backgrounds/slices/thirdRoomBG_2_2.png</asset>
-	<asset name="thirdRoomBG_3_0" type="graphic">backgrounds/slices/thirdRoomBG_3_0.png</asset>
-	<asset name="thirdRoomBG_3_1" type="graphic">backgrounds/slices/thirdRoomBG_3_1.png</asset>
-	<asset name="thirdRoomBG_3_2" type="graphic">backgrounds/slices/thirdRoomBG_3_2.png</asset>
 	<asset name="thirdRoomStairs" type="path">287,224;592,13;481,13;287,152;287,224</asset>
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
