@@ -101,11 +101,9 @@ safe than sorry.-->
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
 	it"s incredibly useful and easy to use. -->
-  <room name="secondRoom" walkableMap="secondRoomMap" width="1236" height="844">
-      <paths>
-        <MotionPath path="secondRoomStairs" xtox = '0.7' xtoy = '0.7' ytox='0' ytoy = '1' dx='0' dy='0'/>
-      </paths> 
-        <trigger>
+  <room name="secondRoom" walkableMap="secondRoomMap" width="3204" height="2576"> 
+     <triggers>
+	<trigger>
   	  <args>inBox,char,3199,1789,3199,1909</args>
             <action command="deltaSprite" noWait="true">
               <args>char,-40,0</args>
@@ -114,6 +112,14 @@ safe than sorry.-->
                 </action>
             </action>
         </trigger>
+	
+	<trigger>
+  	  <args>inBox,char,871,1815,920,1821</args>
+            <action command="changeRoomRemote">
+              <args>rooms/firstRoom.xml,firstRoom,435,730</args>
+            </action>
+        </trigger>
+     </triggers>
   	<!-- here we drop in our character. Since we specified everything in 
   	chars/aegeas.xml, we don't have to do much here. We just need to specify
   	his location. Note that class="aegeas" will fill in all the values we
