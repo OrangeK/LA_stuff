@@ -9,7 +9,7 @@ and even their music. Often this is used to also link in their actual conversati
 </classes>
 	<!-- The description of this character (see usage in rooms/firstRoom.xml). 
 	Characters use a single sprite sheet to describe eight different animations, 
-	and thisefore need a lot of parameters to properly describe themselves.
+	and therefore need a lot of parameters to properly describe themselves.
 	Characters are by default depth='1' (in the midground). -->
 	<character class='aegeas' name='aegeas' sx='-50' sy='-115' sWidth='40' sHeight='88' width='35' height='25' sheet='aegeasSheet' state='walkFront' facing='Front'>
 		
@@ -23,7 +23,7 @@ and even their music. Often this is used to also link in their actual conversati
 	</assets>
 
 <hud>
-	<!-- this is the actual place whise the dialog sprites get registered -->
+	<!-- this is the actual place where the dialog sprites get registered -->
 	<dialogsprites>	
   		<animation name='aegeas_blank' class='aegeas-dialog' sheet='aegeas_blank'/>
         </dialogsprites>

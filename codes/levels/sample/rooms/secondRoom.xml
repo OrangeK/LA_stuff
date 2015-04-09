@@ -29,7 +29,7 @@ is entered for the first time. -->
 	<asset name="secondRoomBG_3_0" type="graphic">backgrounds/slices/secondRoomBG_3_0.png</asset>
 	<asset name="secondRoomBG_3_1" type="graphic">backgrounds/slices/secondRoomBG_3_1.png</asset>
 	<asset name="secondRoomBG_3_2" type="graphic">backgrounds/slices/secondRoomBG_3_2.png</asset>
-	<asset name="secondRoomBridge1" type="path">287,224;592,13;481,13;304,133;287,224</asset>
+	<asset name="secondRoomBridge1" type="path">1669,1787;592,13;481,13;304,133;287,224</asset>
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
 	a very large amount of memory to use, so we keep the scaled down. I find 50%
@@ -74,30 +74,25 @@ safe than sorry.-->
         <MotionPath path="secondRoomStairs" xtox = '0.7' xtoy = '0.7' ytox='0' ytoy = '1' dx='0' dy='0'/>
       </paths> 
         <trigger>
-  	  <args>inBox,char,380,788,483,748</args>
-            <action command="changeRoomRemote">
-              <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
+  	  <args>inBox,char,3199,1789,3199,1909</args>
+            <action command="deltaSprite" noWait="true">
+              <args>char,-40,0</args>
+                <action command="talk" noWait="true">
+                  <args>@! Eyy, there's nothing over here!</args>
+                </action>
             </action>
         </trigger>
   	<!-- here we drop in our character. Since we specified everything in 
-  	chars/aegeas.xml, we don"t have to do much here. We just need to specify
+  	chars/aegeas.xml, we don't have to do much here. We just need to specify
   	his location. Note that class="aegeas" will fill in all the values we
   	didn"t specify using the class in chars/aegeas.xml, including any
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
-  	<character class="aegeas" x="500" y="250">
-  	</character>
+  	
   
-        <sprite class="chest1" name="chest1" x="166" y="498">
-			<action command="openChest" name="Open.">
-				<args>
-					chest1,diary, @! You got your ancestor's diary! @! You really should read this.
-				</args>
-			</action>
-		</sprite>
 
-   <!-- here we"re adding in our BG and FG. This is the second half of our 
+   <!-- here we're adding in our BG and FG. This is the second half of our 
    optimization. To avoid creating a dozen sprites for every single tile, we
    specify that this image has been sliced up into tiles. Then we just specify
    how many there are and how big they are, and the system will find all of them
@@ -107,7 +102,7 @@ safe than sorry.-->
    <!-- Note no depthing specification puts a sprite in the background. Not 
    specifying coordinates also puts them at (0,0) by default (top-left corner). -->
     <sprite name="secondRoomBG">
-    	<animation sheet="secondRoomBG" sliced="true" numCols="2" numRows="2" colSize="500" rowSize="500"/>
+    	<animation sheet="secondRoomBG" sliced="true" numCols="7" numRows="6" colSize="500" rowSize="500"/>
     </sprite>
 
   </room>
