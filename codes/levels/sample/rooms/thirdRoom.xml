@@ -6,7 +6,7 @@ is entered for the first time. -->
 
 <dependencies>
 	<dependency>chars/aegeas.xml</dependency> <!-- loading in everything aegeas entails -->
-
+</dependencies>
 <assets>
 	<!-- This is the third half of a big optimization. Some people have a lot of
 	trouble rendering big images, even if only a small part is being requested. While
