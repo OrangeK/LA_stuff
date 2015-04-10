@@ -4,28 +4,29 @@ and even their music. Often this is used to also link in their actual conversati
 <sburb description='aegeas'>
 
 
-	<!-- The description of this character (see usage in rooms/firstRoom.xml). 
-	Characters use a single sprite sheet to describe eight different animations, 
+	<!-- The description of this character (see usage in rooms/firstRoom.xml).
+	Characters use a single sprite sheet to describe eight different animations,
 	and therefore need a lot of parameters to properly describe themselves.
 	Characters are by default depth='1' (in the midground). -->
-	<character class='aegeas' name='aegeas' sx='-50' sy='-115' sWidth='40' sHeight='88' width='35' height='25' sheet='aegeasSheet' state='walkFront' facing='Front'>
-		
-	</character>
+
+
+
 	<assets>
 	<!-- sprite sheet containing all his animations -->
 	<asset name='aegeasSheet' type='graphic'>chars/aegeas/aegeas.png</asset>
-	
+
 	<!-- his dialog sprites -->
 	<asset name='aegeas_blank' type='graphic'>dialogs/storage/blank.png</asset>
 	</assets>
 <classes>
+		<character class='aegeas' name='aegeas' sx='-50' sy='-115' sWidth='40' sHeight='88' width='35' height='25' sheet='aegeasSheet' state='walkFront' facing='Front'></character>
 	<!-- default values for all this character's dailog sprites -->
 	<animation class='aegeas-dialog' frameInterval='6' x='-180' y='-524'/>
 </classes>
 
 <hud>
 	<!-- this is the actual place where the dialog sprites get registered -->
-	<dialogsprites>	
+	<dialogsprites>
   		<animation name='aegeas_blank' class='aegeas-dialog' sheet='aegeas_blank'/>
         </dialogsprites>
 </hud>
