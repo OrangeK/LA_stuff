@@ -141,7 +141,7 @@ safe than sorry.-->
    to transition from using one big image to a sliced up one. -->
    
    <!-- Note no depthing specification puts a sprite in the background. Not 
-   specifying coordinates also puts them at (0,0) by default (top-left corner). -->
+   specifying coordinatornates also puts them at (0,0) by default (top-left corner). -->
     <sprite name='secondRoomBG'>
     	<animation sheet='secondRoomBG' sliced='true' numCols='7' numRows='6' colSize='500' rowSize='500'/>
     </sprite>

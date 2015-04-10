@@ -32,9 +32,7 @@ is entered for the first time. -->
   
   <!-- an item to be found in a chest, nothing special about it-->
   <asset name='diary' type='graphic'>objects/items/diary.png</asset>
-  <asset name='bubble' type='graphic'>objects/items/bubble.png</asset>
-  <asset name='table' type='graphic'>objects/items/desk.png</asset>
-</assets>
+  </assets>
 <!-- We create the sprite for this item outside of everything else
 because by default it isn't anywhere at all. We just want to be able to
 access it at some point in the future. This is a very common pattern. We
@@ -44,12 +42,8 @@ Note: depthing='2' puts this in front of everything, including foreground elemen
 <sprite name='diary' depthing='2'>
 	<animation sheet='diary' x='-30' y='-30'/>
 </sprite>
-<sprite name='desk' depthing='1'>
-        <animation sheet='desk' x='386' y='136'/>
-</sprite>
-<sprite name='bubble' depthing='2'>
-        <animation sheet='bubble' x='-420' y='-69'/>
-</sprite>
+
+
 <!-- We wrap all room tags in the rooms tag. This is mostly useless since it's
 not good practice to keep multiple rooms in one file, but hey, better
 safe than sorry.-->

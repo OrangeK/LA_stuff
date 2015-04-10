@@ -31,20 +31,24 @@ is entered for the first time. -->
 	scale is a good compromise for performance/accuracy. However in sufficiently
 	large rooms this is still too much, and 25% scale in necessary. This leads to
 	a substantial sarcifice in hit-detection quality, so avoid big rooms!-->
+  
   <asset name='firstRoomMap' type='graphic'>backgrounds/firstRoomMap.png</asset>
   <asset name='stairsBlocker' type='path'>1052,348;1124,348;1124,394;1052,394;1052,348</asset>
   <!-- an item to be found in a chest, nothing special about it-->
-  <asset name='diary' type='graphic'>objects/items/diary.png</asset>
+ 
   <asset name='bubble' type='graphic'>objects/items/bubble.png</asset>
-  <asset name='table' type='graphic'>objects/items/desk.png</asset>
+  <asset name='desk' type='graphic'>objects/items/desk.png</asset>
 </assets>
+<classes>
+ <character class='aegeas' name='aegeas' sx='-50' sy='-115' sWidth='40' sHeight='88' width='35' height='25' sheet='aegeasSheet' state='walkFront' facing='Front'></character>
+</classes>
 <!-- We create the sprite for this item outside of everything else
 because by default it isn't anywhere at all. We just want to be able to
 access it at some point in the future. This is a very common pattern. We
 do this for anything that will "eventually" be added to a room.
 
 Note: depthing='2' puts this in front of everything, including foreground elements! -->
-<sprite name='diary' depthing='2'>
+<sprite name='diary' depthing='3'>
 	<animation sheet='diary' x='-30' y='-30'/>
 </sprite>
 <sprite name='desk' depthing='1'>
