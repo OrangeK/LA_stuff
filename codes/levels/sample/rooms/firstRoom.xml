@@ -1,6 +1,6 @@
 <!-- This file describes the first room. Normally I break each room into its
 own self-contained file. This isn't fundamentally necessary, but it's very
-natural. It also allows you to very easily load content only once a room 
+natural. It also allows you to very easily load content only once a room
 is entered for the first time. -->
 <sburb description="first room">
 
@@ -15,8 +15,8 @@ is entered for the first time. -->
 	slice up all the big background and foreground images into a grid so that it's
 	easier for end users' computer to pick out the parts we want.
 	All the images except for the bottom-most and right-most ones are 500x500. I
-	find that's a good compromise for performance/complexity. 
-	
+	find that's a good compromise for performance/complexity.
+
 	utils/image_slice/ has a utility for doing this automatically. -->
         <asset name='firstRoomBG_0_0' type='graphic'>backgrounds/slices/firstRoomBG_0_0.png</asset>
 	<asset name='firstRoomBG_0_1' type='graphic'>backgrounds/slices/firstRoomBG_0_1.png</asset>
@@ -24,7 +24,7 @@ is entered for the first time. -->
 	<asset name='firstRoomBG_1_1' type='graphic'>backgrounds/slices/firstRoomBG_1_1.png</asset>
 	<asset name='firstRoomBG_2_0' type='graphic'>backgrounds/slices/firstRoomBG_2_0.png</asset>
 	<asset name='firstRoomBG_2_1' type='graphic'>backgrounds/slices/firstRoomBG_2_1.png</asset>
-	
+
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
 	a very large amount of memory to use, so we keep the scaled down. I find 50%
@@ -61,7 +61,7 @@ Note: depthing='2' puts this in front of everything, including foreground elemen
 not good practice to keep multiple rooms in one file, but hey, better
 safe than sorry.-->
 <rooms>
-	<!-- Here we describe our room, note that here we are using the "map" we 
+	<!-- Here we describe our room, note that here we are using the "map" we
 	loaded in earlier. Also note the scale variable specifying how much this map
 	should be scaled up for it to reflect the actual room size. We also derive
 	the dimensions of the room from this, which is used to specify the area the
@@ -71,14 +71,14 @@ safe than sorry.-->
   <room name='firstRoom' walkableMap='firstRoomMap' width='1236' height='844'>
      <paths>
        <Unwalkable path="stairsBlocker"/>
-     </paths> 
-     <triggers>  
+     </paths>
+     <triggers>
         <trigger>
   	  <args>inBox,char,380,788,483,748</args>
             <action command="changeRoomRemote">
               <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
             </action>
-        </trigger> 
+        </trigger>
         <trigger>
   	  <args>inBox,char,886,173,483,748</args>
             <action command="changeRoomRemote">
@@ -86,7 +86,7 @@ safe than sorry.-->
             </action>
         </trigger>
     </triggers>
-  	<!-- here we drop in our character. Since we specified everything in 
+  	<!-- here we drop in our character. Since we specified everything in
   	chars/aegeas.xml, we don't have to do much here. We just need to specify
   	his location. Note that class='aegeas' will fill in all the values we
   	didn't specify using the class in chars/aegeas.xml, including any
@@ -95,15 +95,15 @@ safe than sorry.-->
   	patterns. -->
   	<character class='aegeas' x='249' y='413'>
   	</character>
-  
-   <!-- here we're adding in our BG and FG. This is the second half of our 
+
+   <!-- here we're adding in our BG and FG. This is the second half of our
    optimization. To avoid creating a dozen sprites for every single tile, we
    specify that this image has been sliced up into tiles. Then we just specify
    how many there are and how big they are, and the system will find all of them
    and tile them correctly based on their names. This also makes it very easy
    to transition from using one big image to a sliced up one. -->
-   
-   <!-- Note no depthing specification puts a sprite in the background. Not 
+
+   <!-- Note no depthing specification puts a sprite in the background. Not
    specifying coordinates also puts them at (0,0) by default (top-left corner). -->
     <sprite name='firstRoomBG'>
     	<animation sheet='firstRoomBG' sliced='true' numCols='3' numRows='2' colSize='500' rowSize='500'/>
