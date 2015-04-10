@@ -1,8 +1,8 @@
 <!-- This file describes the third room. Normally I break each room into its
-own self-contained file. This isn"t fundamentally necessary, but it"s very
+own self-contained file. This isn't fundamentally necessary, but it's very
 natural. It also allows you to very easily load content only once a room 
 is entered for the first time. -->
-<sburb description="third room">
+<sburb description='third room'>
 
 <dependencies>
 	<dependency>chars/aegeas.xml</dependency> <!-- loading in everything aegeas entails -->
@@ -10,86 +10,86 @@ is entered for the first time. -->
 <assets>
 	<!-- This is the third half of a big optimization. Some people have a lot of
 	trouble rendering big images, even if only a small part is being requested. While
-	in development we often use the "full" image, but once we go into production we
-	slice up all the big background and foreground images into a grid so that it"s
-	easier for end users" computer to pick out the parts we want.
+	in development we often use the 'full' image, but once we go into production we
+	slice up all the big background and foreground images into a grid so that it's
+	easier for end users' computer to pick out the parts we want.
 	All the images except for the bottom-most and right-most ones are 500x500. I
-	find that"s a good compromise for performance/complexity. 
+	find that's a good compromise for performance/complexity. 
 	
 	utils/image_slice/ has a utility for doing this automatically. -->
-	<asset name="thirdRoomBG_0_0" type="graphic">backgrounds/slices/thirdRoomBG_0_0.png</asset>
-	<asset name="thirdRoomBG_0_1" type="graphic">backgrounds/slices/thirdRoomBG_0_1.png</asset>
-	<asset name="thirdRoomBG_1_0" type="graphic">backgrounds/slices/thirdRoomBG_1_0.png</asset>
-	<asset name="thirdRoomBG_1_1" type="graphic">backgrounds/slices/thirdRoomBG_1_1.png</asset>
-	<asset name="thirdRoomStairs" type="path">287,224;592,13;481,13;287,152;287,224</asset>
+	<asset name='thirdRoomBG_0_0' type='graphic'>backgrounds/slices/thirdRoomBG_0_0.png</asset>
+	<asset name='thirdRoomBG_0_1' type='graphic'>backgrounds/slices/thirdRoomBG_0_1.png</asset>
+	<asset name='thirdRoomBG_1_0' type='graphic'>backgrounds/slices/thirdRoomBG_1_0.png</asset>
+	<asset name='thirdRoomBG_1_1' type='graphic'>backgrounds/slices/thirdRoomBG_1_1.png</asset>
+	<asset name='thirdRoomStairs' type='path'>287,224;592,13;481,13;287,152;287,224</asset>
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
 	a very large amount of memory to use, so we keep the scaled down. I find 50%
 	scale is a good compromise for performance/accuracy. However in sufficiently
 	large rooms this is still too much, and 25% scale in necessary. This leads to
 	a substantial sarcifice in hit-detection quality, so avoid big rooms!-->
-  <asset name="thirdRoomMap" type="graphic">backgrounds/thirdRoomMap.png</asset>
+  <asset name='thirdRoomMap' type='graphic'>backgrounds/thirdRoomMap.png</asset>
   
   <!-- an item to be found in a chest, nothing special about it-->
-  <asset name="diary" type="graphic">objects/items/diary.png</asset>
-  <asset name="bubble" type="graphic">objects/items/bubble.png</asset>
-  <asset name="table" type="graphic">objects/items/desk.png</asset>
+  <asset name='diary' type='graphic'>objects/items/diary.png</asset>
+  <asset name='bubble' type='graphic'>objects/items/bubble.png</asset>
+  <asset name='table' type='graphic'>objects/items/desk.png</asset>
 </assets>
 <!-- We create the sprite for this item outside of everything else
-because by default it isn"t anywhere at all. We just want to be able to
+because by default it isn't anywhere at all. We just want to be able to
 access it at some point in the future. This is a very common pattern. We
-do this for anything that will "eventually" be added to a room.
+do this for anything that will 'eventually' be added to a room.
 
-Note: depthing="2" puts this in front of everything, including foreground elements! -->
-<sprite name="diary" depthing="2">
-	<animation sheet="diary" x="-30" y="-30"/>
+Note: depthing='2' puts this in front of everything, including foreground elements! -->
+<sprite name='diary' depthing='2'>
+	<animation sheet='diary' x='-30' y='-30'/>
 </sprite>
-<sprite name="desk" depthing="1">
-        <animation sheet="desk" x="386" y="136"/>
+<sprite name='desk' depthing='1'>
+        <animation sheet='desk' x='386' y='136'/>
 </sprite>
-<sprite name="bubble" depthing="2">
-        <animation sheet="bubble" x="-420" y="-69"/>
+<sprite name='bubble' depthing='2'>
+        <animation sheet='bubble' x='-420' y='-69'/>
 </sprite>
-<!-- We wrap all room tags in the rooms tag. This is mostly useless since it"s
+<!-- We wrap all room tags in the rooms tag. This is mostly useless since it's
 not good practice to keep multiple rooms in one file, but hey, better
 safe than sorry.-->
 <rooms>
-	<!-- Here we describe our room, note that here we are using the "map" we 
+	<!-- Here we describe our room, note that here we are using the 'map' we 
 	loaded in earlier. Also note the scale variable specifying how much this map
 	should be scaled up for it to reflect the actual room size. We also derive
 	the dimensions of the room from this, which is used to specify the area the
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
-	it"s incredibly useful and easy to use. -->
-  <room name="thirdRoom" walkableMap="thirdRoomMap" width="1236" height="844">
+	it's incredibly useful and easy to use. -->
+  <room name='thirdRoom' walkableMap='thirdRoomMap' width='700' height='700'>
       <paths>
-        <MotionPath path="thirdRoomStairs" xtox = '0.7' xtoy = '0.7' ytox='0' ytoy = '1' dx='0' dy='0'/>
+        <MotionPath path='thirdRoomStairs' xtox = '0.7' xtoy = '0.7' ytox='0' ytoy = '1' dx='0' dy='0'/>
       </paths> 
         <trigger>
   	  <args>inBox,char,380,788,483,748</args>
-            <action command="changeRoomRemote">
+            <action command='changeRoomRemote'>
               <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
             </action>
         </trigger>
   	<!-- here we drop in our character. Since we specified everything in 
-  	chars/aegeas.xml, we don"t have to do much here. We just need to specify
-  	his location. Note that class="aegeas" will fill in all the values we
-  	didn"t specify using the class in chars/aegeas.xml, including any
+  	chars/aegeas.xml, we don't have to do much here. We just need to specify
+  	his location. Note that class='aegeas' will fill in all the values we
+  	didn't specify using the class in chars/aegeas.xml, including any
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
-  	<character class="aegeas" x="500" y="250">
+  	<character class='aegeas' x='500' y='250'>
   	</character>
   
-        <sprite class="chest1" name="chest1" x="166" y="498">
-			<action command="openChest" name="Open.">
+        <sprite class='chest1' name='chest1' x='166' y='498'>
+			<action command='openChest' name='Open.'>
 				<args>
-					chest1,diary, @! You got your ancestor's diary! @! You really should read this.
+					chest1,diary, @! You got your ancestor's diary! @! You open the cover very carefully, and start reading.
 				</args>
 			</action>
 		</sprite>
 
-   <!-- here we"re adding in our BG and FG. This is the second half of our 
+   <!-- here we're adding in our BG and FG. This is the second half of our 
    optimization. To avoid creating a dozen sprites for every single tile, we
    specify that this image has been sliced up into tiles. Then we just specify
    how many there are and how big they are, and the system will find all of them
@@ -98,8 +98,8 @@ safe than sorry.-->
    
    <!-- Note no depthing specification puts a sprite in the background. Not 
    specifying coordinates also puts them at (0,0) by default (top-left corner). -->
-    <sprite name="thirdRoomBG">
-    	<animation sheet="thirdRoomBG" sliced="true" numCols="2" numRows="2" colSize="500" rowSize="500"/>
+    <sprite name='thirdRoomBG'>
+    	<animation sheet='thirdRoomBG' sliced='true' numCols='2' numRows='2' colSize='500' rowSize='500'/>
     </sprite>
 
   </room>

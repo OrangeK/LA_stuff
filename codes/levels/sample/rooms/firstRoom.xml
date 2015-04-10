@@ -32,7 +32,7 @@ is entered for the first time. -->
 	large rooms this is still too much, and 25% scale in necessary. This leads to
 	a substantial sarcifice in hit-detection quality, so avoid big rooms!-->
   <asset name='firstRoomMap' type='graphic'>backgrounds/firstRoomMap.png</asset>
-  
+  <asset name='stairsBlocker' type='path'>1052,348;1124,348;1124,394;1052,394;1052,348</asset>
   <!-- an item to be found in a chest, nothing special about it-->
   <asset name='diary' type='graphic'>objects/items/diary.png</asset>
   <asset name='bubble' type='graphic'>objects/items/bubble.png</asset>
@@ -65,9 +65,18 @@ safe than sorry.-->
 	specified here if need be. The walkableMap is theoretically optional, but
 	it's incredibly useful and easy to use. -->
   <room name='firstRoom' walkableMap='firstRoomMap' width='1236' height='844'>
+     <paths>
+       <Unwalkable path="stairsBlocker"/>
+     </paths> 
      <triggers>  
         <trigger>
   	  <args>inBox,char,380,788,483,748</args>
+            <action command="changeRoomRemote">
+              <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
+            </action>
+        </trigger> 
+        <trigger>
+  	  <args>inBox,char,886,173,483,748</args>
             <action command="changeRoomRemote">
               <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
             </action>

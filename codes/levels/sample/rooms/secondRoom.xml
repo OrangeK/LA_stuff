@@ -1,8 +1,8 @@
 <!-- This file describes the second room. Normally I break each room into its
-own self-contained file. This isn"t fundamentally necessary, but it"s very
+own self-contained file. This isn't fundamentally necessary, but it's very
 natural. It also allows you to very easily load content only once a room 
 is entered for the first time. -->
-<sburb description="second room">
+<sburb description='second room'>
 
 <dependencies>
 	<dependency>chars/aegeas.xml</dependency> <!-- loading in everything aegeas entails -->
@@ -10,120 +10,123 @@ is entered for the first time. -->
 <assets>
 	<!-- This is the first half of a big optimization. Some people have a lot of
 	trouble rendering big images, even if only a small part is being requested. While
-	in development we often use the "full" image, but once we go into production we
-	slice up all the big background and foreground images into a grid so that it"s
-	easier for end users" computer to pick out the parts we want.
+	in development we often use the 'full' image, but once we go into production we
+	slice up all the big background and foreground images into a grid so that it's
+	easier for end users' computer to pick out the parts we want.
 	All the images except for the bottom-most and right-most ones are 500x500. I
-	find that"s a good compromise for performance/complexity. 
+	find that's a good compromise for performance/complexity. 
 	
 	utils/image_slice/ has a utility for doing this automatically. -->
-        <asset name="secondRoomBG_0_0" type="graphic">backgrounds/slices/secondRoomBG_0_0.png</asset>
-	<asset name="secondRoomBG_0_1" type="graphic">backgrounds/slices/secondRoomBG_0_1.png</asset>
-	<asset name="secondRoomBG_0_2" type="graphic">backgrounds/slices/secondRoomBG_0_2.png</asset>
-	<asset name="secondRoomBG_0_3" type="graphic">backgrounds/slices/secondRoomBG_0_3.png</asset>
-	<asset name="secondRoomBG_0_4" type="graphic">backgrounds/slices/secondRoomBG_0_4.png</asset>
-	<asset name="secondRoomBG_0_5" type="graphic">backgrounds/slices/secondRoomBG_0_5.png</asset>
-	<asset name="secondRoomBG_1_0" type="graphic">backgrounds/slices/secondRoomBG_1_0.png</asset>
-	<asset name="secondRoomBG_1_1" type="graphic">backgrounds/slices/secondRoomBG_1_1.png</asset>
-	<asset name="secondRoomBG_1_2" type="graphic">backgrounds/slices/secondRoomBG_1_2.png</asset>
-	<asset name="secondRoomBG_1_3" type="graphic">backgrounds/slices/secondRoomBG_1_3.png</asset>
-	<asset name="secondRoomBG_1_4" type="graphic">backgrounds/slices/secondRoomBG_1_4.png</asset>
-	<asset name="secondRoomBG_1_5" type="graphic">backgrounds/slices/secondRoomBG_1_5.png</asset>
-	<asset name="secondRoomBG_2_0" type="graphic">backgrounds/slices/secondRoomBG_2_0.png</asset>
-	<asset name="secondRoomBG_2_1" type="graphic">backgrounds/slices/secondRoomBG_2_1.png</asset>
-	<asset name="secondRoomBG_2_2" type="graphic">backgrounds/slices/secondRoomBG_2_2.png</asset>
-	<asset name="secondRoomBG_2_3" type="graphic">backgrounds/slices/secondRoomBG_2_3.png</asset>
-	<asset name="secondRoomBG_2_4" type="graphic">backgrounds/slices/secondRoomBG_2_4.png</asset>
-	<asset name="secondRoomBG_2_5" type="graphic">backgrounds/slices/secondRoomBG_2_5.png</asset>
-	<asset name="secondRoomBG_3_0" type="graphic">backgrounds/slices/secondRoomBG_3_0.png</asset>
-	<asset name="secondRoomBG_3_1" type="graphic">backgrounds/slices/secondRoomBG_3_1.png</asset>
-	<asset name="secondRoomBG_3_2" type="graphic">backgrounds/slices/secondRoomBG_3_2.png</asset>
-	<asset name="secondRoomBG_3_3" type="graphic">backgrounds/slices/secondRoomBG_3_3.png</asset>
-	<asset name="secondRoomBG_3_4" type="graphic">backgrounds/slices/secondRoomBG_3_4.png</asset>
-	<asset name="secondRoomBG_3_5" type="graphic">backgrounds/slices/secondRoomBG_3_5.png</asset>
-	<asset name="secondRoomBG_4_0" type="graphic">backgrounds/slices/secondRoomBG_4_0.png</asset>
-	<asset name="secondRoomBG_4_1" type="graphic">backgrounds/slices/secondRoomBG_4_1.png</asset>
-	<asset name="secondRoomBG_4_2" type="graphic">backgrounds/slices/secondRoomBG_4_2.png</asset>
-	<asset name="secondRoomBG_4_3" type="graphic">backgrounds/slices/secondRoomBG_4_3.png</asset>
-	<asset name="secondRoomBG_4_4" type="graphic">backgrounds/slices/secondRoomBG_4_4.png</asset>
-	<asset name="secondRoomBG_4_5" type="graphic">backgrounds/slices/secondRoomBG_4_5.png</asset>
-	<asset name="secondRoomBG_5_0" type="graphic">backgrounds/slices/secondRoomBG_5_0.png</asset>
-	<asset name="secondRoomBG_5_1" type="graphic">backgrounds/slices/secondRoomBG_5_1.png</asset>
-	<asset name="secondRoomBG_5_2" type="graphic">backgrounds/slices/secondRoomBG_5_2.png</asset>
-	<asset name="secondRoomBG_5_3" type="graphic">backgrounds/slices/secondRoomBG_5_3.png</asset>
-	<asset name="secondRoomBG_5_4" type="graphic">backgrounds/slices/secondRoomBG_5_4.png</asset>
-	<asset name="secondRoomBG_5_5" type="graphic">backgrounds/slices/secondRoomBG_5_5.png</asset>
-	<asset name="secondRoomBG_6_0" type="graphic">backgrounds/slices/secondRoomBG_6_0.png</asset>
-	<asset name="secondRoomBG_6_1" type="graphic">backgrounds/slices/secondRoomBG_6_1.png</asset>
-	<asset name="secondRoomBG_6_2" type="graphic">backgrounds/slices/secondRoomBG_6_2.png</asset>
-	<asset name="secondRoomBG_6_3" type="graphic">backgrounds/slices/secondRoomBG_6_3.png</asset>
-	<asset name="secondRoomBG_6_4" type="graphic">backgrounds/slices/secondRoomBG_6_4.png</asset>
-	<asset name="secondRoomBG_6_5" type="graphic">backgrounds/slices/secondRoomBG_6_5.png</asset>
-	<asset name="secondRoomBridge1" type="path">1669,1787;1806,1708;1814,1826;1716,1880;1669,1787</asset>
+        <asset name='secondRoomBG_0_0' type='graphic'>backgrounds/slices/secondRoomBG_0_0.png</asset>
+	<asset name='secondRoomBG_0_1' type='graphic'>backgrounds/slices/secondRoomBG_0_1.png</asset>
+	<asset name='secondRoomBG_0_2' type='graphic'>backgrounds/slices/secondRoomBG_0_2.png</asset>
+	<asset name='secondRoomBG_0_3' type='graphic'>backgrounds/slices/secondRoomBG_0_3.png</asset>
+	<asset name='secondRoomBG_0_4' type='graphic'>backgrounds/slices/secondRoomBG_0_4.png</asset>
+	<asset name='secondRoomBG_0_5' type='graphic'>backgrounds/slices/secondRoomBG_0_5.png</asset>
+	<asset name='secondRoomBG_1_0' type='graphic'>backgrounds/slices/secondRoomBG_1_0.png</asset>
+	<asset name='secondRoomBG_1_1' type='graphic'>backgrounds/slices/secondRoomBG_1_1.png</asset>
+	<asset name='secondRoomBG_1_2' type='graphic'>backgrounds/slices/secondRoomBG_1_2.png</asset>
+	<asset name='secondRoomBG_1_3' type='graphic'>backgrounds/slices/secondRoomBG_1_3.png</asset>
+	<asset name='secondRoomBG_1_4' type='graphic'>backgrounds/slices/secondRoomBG_1_4.png</asset>
+	<asset name='secondRoomBG_1_5' type='graphic'>backgrounds/slices/secondRoomBG_1_5.png</asset>
+	<asset name='secondRoomBG_2_0' type='graphic'>backgrounds/slices/secondRoomBG_2_0.png</asset>
+	<asset name='secondRoomBG_2_1' type='graphic'>backgrounds/slices/secondRoomBG_2_1.png</asset>
+	<asset name='secondRoomBG_2_2' type='graphic'>backgrounds/slices/secondRoomBG_2_2.png</asset>
+	<asset name='secondRoomBG_2_3' type='graphic'>backgrounds/slices/secondRoomBG_2_3.png</asset>
+	<asset name='secondRoomBG_2_4' type='graphic'>backgrounds/slices/secondRoomBG_2_4.png</asset>
+	<asset name='secondRoomBG_2_5' type='graphic'>backgrounds/slices/secondRoomBG_2_5.png</asset>
+	<asset name='secondRoomBG_3_0' type='graphic'>backgrounds/slices/secondRoomBG_3_0.png</asset>
+	<asset name='secondRoomBG_3_1' type='graphic'>backgrounds/slices/secondRoomBG_3_1.png</asset>
+	<asset name='secondRoomBG_3_2' type='graphic'>backgrounds/slices/secondRoomBG_3_2.png</asset>
+	<asset name='secondRoomBG_3_3' type='graphic'>backgrounds/slices/secondRoomBG_3_3.png</asset>
+	<asset name='secondRoomBG_3_4' type='graphic'>backgrounds/slices/secondRoomBG_3_4.png</asset>
+	<asset name='secondRoomBG_3_5' type='graphic'>backgrounds/slices/secondRoomBG_3_5.png</asset>
+	<asset name='secondRoomBG_4_0' type='graphic'>backgrounds/slices/secondRoomBG_4_0.png</asset>
+	<asset name='secondRoomBG_4_1' type='graphic'>backgrounds/slices/secondRoomBG_4_1.png</asset>
+	<asset name='secondRoomBG_4_2' type='graphic'>backgrounds/slices/secondRoomBG_4_2.png</asset>
+	<asset name='secondRoomBG_4_3' type='graphic'>backgrounds/slices/secondRoomBG_4_3.png</asset>
+	<asset name='secondRoomBG_4_4' type='graphic'>backgrounds/slices/secondRoomBG_4_4.png</asset>
+	<asset name='secondRoomBG_4_5' type='graphic'>backgrounds/slices/secondRoomBG_4_5.png</asset>
+	<asset name='secondRoomBG_5_0' type='graphic'>backgrounds/slices/secondRoomBG_5_0.png</asset>
+	<asset name='secondRoomBG_5_1' type='graphic'>backgrounds/slices/secondRoomBG_5_1.png</asset>
+	<asset name='secondRoomBG_5_2' type='graphic'>backgrounds/slices/secondRoomBG_5_2.png</asset>
+	<asset name='secondRoomBG_5_3' type='graphic'>backgrounds/slices/secondRoomBG_5_3.png</asset>
+	<asset name='secondRoomBG_5_4' type='graphic'>backgrounds/slices/secondRoomBG_5_4.png</asset>
+	<asset name='secondRoomBG_5_5' type='graphic'>backgrounds/slices/secondRoomBG_5_5.png</asset>
+	<asset name='secondRoomBG_6_0' type='graphic'>backgrounds/slices/secondRoomBG_6_0.png</asset>
+	<asset name='secondRoomBG_6_1' type='graphic'>backgrounds/slices/secondRoomBG_6_1.png</asset>
+	<asset name='secondRoomBG_6_2' type='graphic'>backgrounds/slices/secondRoomBG_6_2.png</asset>
+	<asset name='secondRoomBG_6_3' type='graphic'>backgrounds/slices/secondRoomBG_6_3.png</asset>
+	<asset name='secondRoomBG_6_4' type='graphic'>backgrounds/slices/secondRoomBG_6_4.png</asset>
+	<asset name='secondRoomBG_6_5' type='graphic'>backgrounds/slices/secondRoomBG_6_5.png</asset>
+	<asset name='secondRoomBridge1' type='path'>1669,1787;1806,1708;1814,1826;1716,1880;1669,1787</asset>
 	
-	<asset name="secondRoomBridge2" type="path">1792,17893;1806,1708;1814,1826;1943,1895;1792,1793</asset>
+	<asset name='secondRoomBridge2' type='path'>1792,17893;1806,1708;1814,1826;1943,1895;1792,1793</asset>
 	<!-- The map is a special black-and-white image describing walkable areas in
 	a room. White pixels are walkable, black are unwalkable. This actually consumes
 	a very large amount of memory to use, so we keep the scaled down. I find 50%
 	scale is a good compromise for performance/accuracy. However in sufficiently
 	large rooms this is still too much, and 25% scale in necessary. This leads to
 	a substantial sarcifice in hit-detection quality, so avoid big rooms!-->
-  <asset name="secondRoomMap" type="graphic">backgrounds/secondRoomMap.png</asset>
+  <asset name='secondRoomMap' type='graphic'>backgrounds/secondRoomMap.png</asset>
   
   <!-- an item to be found in a chest, nothing special about it-->
-  <asset name="diary" type="graphic">objects/items/diary.png</asset>
-  <asset name="bubble" type="graphic">objects/items/bubble.png</asset>
-  <asset name="table" type="graphic">objects/items/desk.png</asset>
-</assets>
+ </assets>
 <!-- We create the sprite for this item outside of everything else
-because by default it isn"t anywhere at all. We just want to be able to
+because by default it isn't anywhere at all. We just want to be able to
 access it at some point in the future. This is a very common pattern. We
-do this for anything that will "eventually" be added to a room.
+do this for anything that will 'eventually' be added to a room.
 
-Note: depthing="2" puts this in front of everything, including foreground elements! -->
-<sprite name="diary" depthing="2">
-	<animation sheet="diary" x="-30" y="-30"/>
-</sprite>
-<sprite name="desk" depthing="1">
-        <animation sheet="desk" x="386" y="136"/>
-</sprite>
-<sprite name="bubble" depthing="2">
-        <animation sheet="bubble" x="-420" y="-69"/>
-</sprite>
-<!-- We wrap all room tags in the rooms tag. This is mostly useless since it"s
+Note: depthing='2' puts this in front of everything, including foreground elements! -->
+<!-- We wrap all room tags in the rooms tag. This is mostly useless since it's
 not good practice to keep multiple rooms in one file, but hey, better
 safe than sorry.-->
 <rooms>
-	<!-- Here we describe our room, note that here we are using the "map" we 
+	<!-- Here we describe our room, note that here we are using the 'map' we 
 	loaded in earlier. Also note the scale variable specifying how much this map
 	should be scaled up for it to reflect the actual room size. We also derive
 	the dimensions of the room from this, which is used to specify the area the
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
-	it"s incredibly useful and easy to use. -->
-  <room name="secondRoom" walkableMap="secondRoomMap" width="3204" height="2576"> 
+	it's incredibly useful and easy to use. -->
+  <room name='secondRoom' walkableMap='secondRoomMap' width='3204' height='2576'> 
      <triggers>
 	<trigger>
-  	  <args>inBox,char,3199,1789,3199,1909</args>
-            <action command="deltaSprite" noWait="true">
+  	  <args>inBox2,char,3199,1789,3199,1909</args>
+            <action command='deltaSprite' noWait='true'>
               <args>char,-40,0</args>
-                <action command="talk" noWait="true">
+                <action command='talk' noWait='true'>
                   <args>@! Eyy, there's nothing over here!</args>
                 </action>
             </action>
         </trigger>
-	
+        <trigger>
+          <args>inBox2,char,1800,1702,1825,1833</args>
+            <action command='talk' detonate='true'>
+              <args>@! You look around for a small while, and you see in the distance a small flickering red light. It acts enough like a fire to convince you that it is one.
+@! You guess the reason for the fire is some unlucky troll is getting burned at the stake. How unfortunate.</args>
+            </action>
+        </trigger>
 	<trigger>
-  	  <args>inBox,char,871,1815,920,1821</args>
-            <action command="changeRoomRemote">
+  	  <args>inBox2,char,2301,1796,2502,1895</args>
+            <action command='removeUnwalkable' detonate='true'>
+              <args>firstRoom,stairsBlocker</args>
+                <action command='talk' noWait='true' detonate='true'>
+                  <args>@! You start wondering why your world is in the messed up state that it is right now. @! If you remember correctly, the journal of your ancestor is somewhere in your basement. You should probably go look at it.</args>
+                </action>
+            </action>
+        </trigger>
+	<trigger>
+  	  <args>inBox2,char,871,1815,920,1821</args>
+            <action command='changeRoomRemote'>
               <args>rooms/firstRoom.xml,firstRoom,435,730</args>
             </action>
         </trigger>
      </triggers>
   	<!-- here we drop in our character. Since we specified everything in 
   	chars/aegeas.xml, we don't have to do much here. We just need to specify
-  	his location. Note that class="aegeas" will fill in all the values we
-  	didn"t specify using the class in chars/aegeas.xml, including any
+  	his location. Note that class='aegeas' will fill in all the values we
+  	didn't specify using the class in chars/aegeas.xml, including any
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
@@ -139,8 +142,8 @@ safe than sorry.-->
    
    <!-- Note no depthing specification puts a sprite in the background. Not 
    specifying coordinates also puts them at (0,0) by default (top-left corner). -->
-    <sprite name="secondRoomBG">
-    	<animation sheet="secondRoomBG" sliced="true" numCols="7" numRows="6" colSize="500" rowSize="500"/>
+    <sprite name='secondRoomBG'>
+    	<animation sheet='secondRoomBG' sliced='true' numCols='7' numRows='6' colSize='500' rowSize='500'/>
     </sprite>
 
   </room>

@@ -1,29 +1,27 @@
-<!-- This is a fairly standard "character" file. hise we describe everything
+<!-- This is a fairly standard "character" file. here we describe everything
 a character entails, including their specification, common actions, dialogsprites
 and even their music. Often this is used to also link in their actual conversations. -->
 <sburb description='orange'>
 
 <classes>
-	<!-- default values for all this character's dailog sprites -->
+	<!-- default values for all this character's dialog sprites -->
 	<animation class='orange-dialog' frameInterval='6' x='-180' y='-524'/>
 </classes>
 	<!-- The description of this character (see usage in rooms/firstRoom.xml). 
 	Characters use a single sprite sheet to describe eight different animations, 
-	and thisefore need a lot of parameters to properly describe themselves.
+	and therefore need a lot of parameters to properly describe themselves.
 	Characters are by default depth='1' (in the midground). -->
-	<character class='orange' name='orange' sx='-50' sy='-115' sWidth='40' sHeight='88' width='35' height='25' sheet='orangeSheet' state='walkFront' facing='Front'>
-		
-	</character>
+			
+	
 	<assets>
-	<!-- sprite sheet containing all his animations -->
-	<asset name='orangeSheet' type='graphic'>chars/orange/orange.png</asset>
+	
 	
 	<!-- his dialog sprites -->
 	<asset name='orange_float' type='graphic'>dialogs/storage/bubbleFloat.png</asset>
 	</assets>
 
 <hud>
-	<!-- this is the actual place whise the dialog sprites get registered -->
+	<!-- this is the actual place where the dialog sprites get registered -->
 	<dialogsprites>	
   		<animation name='orange_float' class='orange-dialog' sheet='orange_float'/>
         </dialogsprites>
