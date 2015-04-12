@@ -39,7 +39,7 @@ access it at some point in the future. This is a very common pattern. We
 do this for anything that will 'eventually' be added to a room.
 
 Note: depthing='2' puts this in front of everything, including foreground elements! -->
-<sprite name='diary' depthing='2'>
+<sprite name='diary' depthing='3'>
 	<animation sheet='diary' x='-30' y='-30'/>
 </sprite>
 
