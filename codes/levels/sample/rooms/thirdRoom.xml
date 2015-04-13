@@ -72,10 +72,9 @@ safe than sorry.-->
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
-  	<character class='aegeas' x='500' y='250'>
-  	</character>
+  	
   
-        <sprite class='chest1' name='chest1' x='166' y='498'>
+        <sprite class='chest1' name='chest1' x='500' y='250'>
 			<action command='openChest' name='Open.'>
 				<args>
 					chest1,diary, @! You got your ancestor's diary! @! You open the cover very carefully, and start reading.

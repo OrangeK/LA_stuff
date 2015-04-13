@@ -50,7 +50,7 @@ do this for anything that will "eventually" be added to a room.
 Note: depthing='2' puts this in front of everything, including foreground elements! -->
 
 <sprite name='desk' depthing='1'>
-        <animation sheet='desk' x='386' y='136'/>
+        <animation sheet='desk' x='386' y='137'/>
 </sprite>
 <sprite name='bubble' depthing='2'>
         <animation sheet='bubble' x='-420' y='-69'/>
@@ -74,13 +74,13 @@ safe than sorry.-->
         <trigger>
   	  <args>inBox,char,380,788,483,748</args>
             <action command="changeRoomRemote">
-              <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
+              <args>rooms/secondRoom.xml,secondRoom,1000,1880</args>
             </action>
         </trigger>
         <trigger>
   	  <args>inBox,char,886,173,483,748</args>
             <action command="changeRoomRemote">
-              <args>rooms/secondRoom.xml,secondRoom,900,1824</args>
+              <args>rooms/thirdRoom.xml,thirdRoom,200,200</args>
             </action>
         </trigger>
     </triggers>
