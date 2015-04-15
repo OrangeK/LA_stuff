@@ -49,7 +49,7 @@ do this for anything that will "eventually" be added to a room.
 
 Note: depthing='2' puts this in front of everything, including foreground elements! -->
 
-<sprite name='desk' depthing='1'>
+<sprite name='desk' depthing='1' collidable='true'>
         <animation sheet='desk' x='386' y='137'/>
 </sprite>
 <sprite name='bubble' depthing='2'>
@@ -66,7 +66,7 @@ safe than sorry.-->
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
 	it's incredibly useful and easy to use. -->
-  <room name='firstRoom' walkableMap='firstRoomMap' width='1236' height='844'>
+  <room name='firstRoom' walkableMap='firstRoomMap' mapScale='2'>
      <paths>
        <Unwalkable path="stairsBlocker"/>
      </paths>
