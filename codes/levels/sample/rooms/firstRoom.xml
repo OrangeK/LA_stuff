@@ -33,7 +33,8 @@ is entered for the first time. -->
 	a substantial sarcifice in hit-detection quality, so avoid big rooms!-->
   
   <asset name='firstRoomMap' type='graphic'>backgrounds/firstRoomMap.png</asset>
-  <asset name='stairsBlocker' type='path'>1052,348;1124,348;1124,394;1052,394;1052,348</asset>
+  <asset name='stairsBlocker' type='path'>1052,402;1124,402;1124,439;1052,439
+;1052,348</asset>
   <!-- an item to be found in a chest, nothing special about it-->
  
   <asset name='bubble' type='graphic'>objects/items/bubble.png</asset>
@@ -78,7 +79,7 @@ safe than sorry.-->
             </action>
         </trigger>
         <trigger>
-  	  <args>inBox,char,886,173,483,748</args>
+  	  <args>inBox,char,879,173,926,246</args>
             <action command="changeRoomRemote">
               <args>rooms/thirdRoom.xml,thirdRoom,200,200</args>
             </action>
@@ -91,7 +92,7 @@ safe than sorry.-->
   	internal tags that may have been part of the class. Template classes
   	are a great way to seperate logic and content, as well as recycle common
   	patterns. -->
-  	<character class='aegeas' x='249' y='413'>
+  	<character class='aegeas' x='250' y='413'>
   	</character>
 
    <!-- here we're adding in our BG and FG. This is the second half of our
