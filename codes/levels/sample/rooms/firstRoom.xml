@@ -67,7 +67,7 @@ safe than sorry.-->
 	camera can see. However width and height can be explicitly
 	specified here if need be. The walkableMap is theoretically optional, but
 	it's incredibly useful and easy to use. -->
-  <room name='firstRoom' walkableMap='firstRoomMap' mapScale='2'>
+  <room name='firstRoom' walkableMap='firstRoomMap' mapScale='4'>
      <paths>
        <Unwalkable path="stairsBlocker"/>
      </paths>
